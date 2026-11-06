@@ -2,9 +2,7 @@
   "name": "portfolio-nezy",
   "version": "1.0.0",
   "description": "Portofolio interaktif Vanesya Wilyan (Nezy) - Mahasiswi Sistem Informasi Politeknik Caltex Riau",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
     "dev": "node server.js"
   },
   "keywords": [

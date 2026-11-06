@@ -137,15 +137,18 @@ section{padding:clamp(80px,14vh,160px) var(--pad) 0}
 .langs small{display:block;color:var(--mute);font-weight:500;font-size:.9rem}
 
 /* contact */
-.contact{margin-top:clamp(100px,16vh,180px);background:var(--ink);color:var(--bone);padding:clamp(90px,16vh,180px) var(--pad) 40px;border-radius:40px 40px 0 0}
-.contact .lead{font-family:var(--display);font-weight:700;font-size:clamp(1.2rem,2.4vw,2rem);letter-spacing:-.02em;margin-bottom:20px}
-.mail{display:inline-block;font-family:var(--display);font-weight:900;font-size:clamp(2rem,7vw,7.6rem);letter-spacing:-.05em;line-height:.95;font-variation-settings:'wdth' 80;transition:color .3s;word-break:break-word}
-.mail:hover{color:var(--pink)}
-.contact .links{display:flex;gap:26px;flex-wrap:wrap;margin-top:36px;font-weight:600}
-.contact .links a{border-bottom:1.5px solid currentColor;padding-bottom:2px;transition:color .2s}
-.contact .links a:hover{color:var(--pink)}
+.contact{margin-top:clamp(80px,14vh,160px);background:var(--ink);color:var(--bone);padding:clamp(70px,12vh,140px) var(--pad) 40px;border-radius:40px 40px 0 0}
+.contact-card{max-width:960px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.contact-desc{color:rgba(241,239,234,.75);font-size:clamp(1.05rem,1.5vw,1.25rem);max-width:48ch;line-height:1.6;margin-bottom:32px}
+.contact-action-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;width:100%}
+.contact-cta{display:inline-flex;align-items:center;gap:14px;padding:16px 24px;border-radius:22px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.14);color:#fff;text-align:left;transition:transform .35s cubic-bezier(.16,1,.3,1),background .3s,border-color .3s}
+.contact-cta:hover{transform:translateY(-6px);background:rgba(255,255,255,.14);border-color:var(--pink)}
+.contact-cta .cta-icon{font-size:1.8rem}
+.contact-cta small{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;opacity:.7}
+.contact-cta b{font-size:1rem;font-weight:800}
+.linkedin-cta:hover{border-color:var(--ultra)}
+@media (max-width:700px){.contact-cta{width:100%;justify-content:flex-start}}
 .magnet{display:inline-block;transition:transform .35s cubic-bezier(.16,1,.3,1)}
-footer{margin-top:clamp(60px,10vh,120px);padding-top:24px;border-top:1px solid rgba(241,239,234,.18);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.9rem;opacity:.7}
 
 /* reels */
 .reels{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1*var(--pad));padding:8px var(--pad) 24px}

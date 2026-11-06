@@ -25,11 +25,12 @@ body::after{
 @media (pointer:fine){.cursor{display:block}body{cursor:none}a,button{cursor:none}}
 
 /* top bar */
-.top{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);mix-blend-mode:difference;color:#fff}
+.top{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:14px var(--pad);background:rgba(241,239,234,.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,16,20,.08);color:var(--ink)}
+html.dark .top{background:rgba(16,16,20,.92);border-bottom:1px solid rgba(241,239,234,.12);color:var(--bone)}
 .top .logo{font-family:var(--display);font-weight:800;font-size:1rem;font-variation-settings:'wdth' 100}
-.top nav{display:flex;gap:26px;font-weight:600;font-size:.95rem}
-.top nav a{opacity:.8;transition:opacity .2s}
-.top nav a:hover{opacity:1}
+.top nav{display:flex;gap:22px;align-items:center;font-weight:600;font-size:.92rem}
+.top nav a{opacity:.75;transition:opacity .2s,color .2s}
+.top nav a:hover{opacity:1;color:var(--pink)}
 
 /* hero */
 .hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--pad) 40px}
@@ -455,10 +456,10 @@ html.intro-on .hero-foot,html.intro-on .hero .now{opacity:0;animation:fadeIn .8s
 }
 
 /* Rapiin Pengalaman */
-.exp{display:grid;grid-template-columns:minmax(0,3.8fr) minmax(0,7.2fr);gap:clamp(32px,6vw,96px);align-items:start}
-.exp-side{position:sticky;top:18vh}
-.exp-side .h2{margin-bottom:18px}
-.exp-lead{color:var(--mute);max-width:32ch;font-size:1.05rem;line-height:1.6}
+.exp{display:grid;grid-template-columns:minmax(260px,360px) 1fr;gap:clamp(36px,5vw,72px);align-items:start}
+.exp-side{position:sticky;top:16vh}
+.exp-side .h2{font-size:clamp(2.4rem,4.2vw,4rem);line-height:1;margin-bottom:14px;word-break:keep-all}
+.exp-lead{color:var(--mute);max-width:34ch;font-size:1.02rem;line-height:1.6}
 .exp-tags-filter{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
 .exp-filter{padding:7px 16px;border-radius:999px;border:1.5px solid var(--rule);font-weight:700;font-size:.82rem;color:var(--ink);background:transparent}
 

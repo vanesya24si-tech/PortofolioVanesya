@@ -280,26 +280,8 @@ function initMain() {
   });
 
   /* ==========================================================================
-     7. SPARKLE CURSOR TRAIL & EASTER EGG ("nezy")
+     7. EASTER EGG ("nezy")
      ========================================================================== */
-  if (fine && !reduce) {
-    let lastSpark = 0;
-    window.addEventListener('mousemove', e => {
-      const now = performance.now();
-      if (now - lastSpark < 45) return;
-      lastSpark = now;
-      const s = document.createElement('i');
-      s.className = 'spark';
-      s.style.left = e.clientX + 'px';
-      s.style.top = e.clientY + 'px';
-      document.body.appendChild(s);
-      s.animate(
-        [{ transform: 'scale(1)', opacity: 0.9 }, { transform: 'scale(0)', opacity: 0 }],
-        { duration: 600, fill: 'forwards' }
-      ).onfinish = () => s.remove();
-    });
-  }
-
   // Easter Egg: type "nezy"
   let eggBuffer = '';
   window.addEventListener('keydown', e => {

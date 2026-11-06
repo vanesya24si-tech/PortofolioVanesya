@@ -42,24 +42,27 @@ function initMain() {
       setTimeout(endIntro, 3700);
       intro.addEventListener('click', endIntro);
 
-      // Replay intro buttons
+      // Replay intro
       const replay = () => {
+        if (!intro) return;
         intro.style.display = '';
+        root.classList.add('intro-on');
         setTimeout(endIntro, 3700);
       };
 
-      const mkReplayBtn = parent => {
-        if (!parent) return;
+      document.querySelectorAll('.replay, #replayBtn').forEach(btn => {
+        btn.addEventListener('click', replay);
+      });
+
+      const footEnd = document.querySelector('.foot-end');
+      if (footEnd && !footEnd.querySelector('.replay')) {
         const b = document.createElement('button');
         b.type = 'button';
         b.className = 'replay';
         b.textContent = '▶ ulang intro';
         b.addEventListener('click', replay);
-        parent.appendChild(b);
-      };
-
-      mkReplayBtn(document.querySelector('.top nav'));
-      mkReplayBtn(document.querySelector('.foot-end'));
+        footEnd.appendChild(b);
+      }
     }
   }
 

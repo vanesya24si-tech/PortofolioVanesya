@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanesya Wilyan (Nezy) — Portofolio</title>
+<meta name="description" content="Portofolio Vanesya Wilyan, mahasiswi D4 Sistem Informasi Politeknik Caltex Riau. Web & mobile development, UI/UX, dan business process analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&family=Schibsted+Grotesk:wght@400..900&family=Bagel+Fat+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-inner">
+    <div class="intro-row">
+      <figure class="ip ipl"><img src="intro-left.jpg" alt="Vanesya Wilyan Intro Left" onerror="this.style.opacity='0'"></figure>
+      <div class="intro-name" id="introName"><div class="iw" data-word="Vanesya"></div><div class="iw" data-word="Wilyan"></div></div>
+      <figure class="ip ipr"><img src="intro-right.jpg" alt="Vanesya Wilyan Intro Right" onerror="this.style.opacity='0'"></figure>
+    </div>
+    <svg class="squiggle" viewBox="0 0 300 30" preserveAspectRatio="none"><path pathLength="1" d="M5 20 Q 30 0 55 20 T 105 20 T 155 20 T 205 20 T 255 20 T 295 20"/></svg>
+    <div class="chips">
+      <span class="chip c1" style="--cd:2s;--r:-4deg">portofolio ✳</span>
+      <span class="chip c2" style="--cd:2.12s;--r:2deg">mahasiswi SI</span>
+      <span class="chip c3" style="--cd:2.24s;--r:-2deg">Politeknik Caltex Riau</span>
+    </div>
+    <p class="typer"><span id="typed"></span><i class="caret">|</i></p>
+  </div>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<header class="top">
+  <span class="logo">nezy/</span>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#kerja">Kerja</a>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#skill">Skill</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" style="padding-top:0;padding-bottom:40px;min-height:100vh;min-height:100svh;padding-top:120px">
+  <video class="hero-bg" src="hero.mp4" autoplay muted loop playsinline onerror="this.remove()"></video>
+  <h1 class="mega" id="mega" aria-label="Nezy.">Nezy<span class="dot">.</span></h1>
+  <div class="stamp" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+    <text font-family="Anybody, sans-serif" font-size="17" font-weight="800" letter-spacing="2" fill="#101014"><textPath href="#circ">KERJA • BIKIN WEB • DATA VIZ • UI/UX • </textPath></text>
+    <circle cx="100" cy="100" r="30" fill="#FF4D8D"/><text x="100" y="109" text-anchor="middle" font-size="30" fill="#101014">✳</text></svg>
+  </div>
+  <div class="hero-foot">
+    <p class="intro"><b>Vanesya Wilyan</b>, mahasiswi D4 Sistem Informasi di Politeknik Caltex Riau. Saya membangun web dan aplikasi mobile, merancang UI/UX, dan memetakan proses bisnis jadi sistem yang rapi.</p>
+    <div class="now"><span class="live"></span><span>Lagi bikin portofolio ini 🛠️</span></div>
+    <div class="hint"><i></i>Gerakkan mouse untuk ubah bentuk huruf</div>
+  </div>
+</section>
+
+<section class="kenal" aria-label="Kenalan">
+  <div class="stage">
+    <span class="fl f1">Netto ✳</span><span class="fl f2">CNN ✳</span><span class="fl f3">Power BI</span>
+    <div class="phone">
+      <div class="screen">
+        <video autoplay muted loop playsinline onerror="this.remove()">
+          <source src="phone.mp4" type="video/mp4">
+          <source src="phone.mov" type="video/quicktime">
+          <source src="IMG_3068.MOV" type="video/quicktime">
+        </video>
+        <img src="assets/images/netto-laundry.webp" alt="Netto Laundry">
+        <img src="assets/images/kesegaran-bayam.webp" alt="Prediksi kesegaran bayam">
+        <img src="assets/images/ujian-pertamina.webp" alt="Ujian online Pertamina">
+        <span class="notch"></span>
+        <span class="scan"></span>
+        <span class="glare"></span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="lanyard"><canvas id="lanyard" aria-label="Kartu nama yang bisa ditarik"></canvas></div>
+    <p class="lanyard-hint">tarik kartunya ✋</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
+
+<section id="tentang" class="about" style="padding-top:clamp(80px,14vh,160px)">
+  <figure class="photo">
+    <img src="foto.jpg" alt="Foto Vanesya Wilyan (Nezy)" onerror="this.remove()">
+    <div class="ph-fallback">Vanesya<br>Wilyan</div>
+  </figure>
+  <div class="copy">
+    <span class="lbl">Kenalan dulu</span>
+    <p class="lead">Saya suka menerjemahkan masalah bisnis jadi produk digital yang bisa dipakai.</p>
+    <p>Saya berpengalaman membangun arsitektur frontend dengan React JS dan backend dengan Laravel, termasuk modul analitik performa penjualan dan manajemen pelanggan. Di sisi lain, saya juga menyusun analisis proses bisnis dengan BPMN, dan mengolah data jadi dashboard lewat Power BI.</p>
+    <p>Di organisasi, saya terbiasa memegang tanggung jawab nyata: mengelola anggaran kepanitiaan, mengatur alur komunikasi birokrasi, dan menjaga kedisiplinan tim.</p>
+    <ul class="facts">
+      <li><b>Kampus</b><span>Politeknik Caltex Riau</span></li>
+      <li><b>Program</b><span>D4 Sistem Informasi, 2024 – sekarang</span></li>
+      <li><b>Lokasi</b><span>Pekanbaru, Indonesia</span></li>
+      <li><b>Email</b><span><a href="mailto:wilyannesa@gmail.com">wilyannesa@gmail.com</a></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="work" id="kerja">
+  <h2 class="h2">Kerjaan aku ✨</h2>
+  <div class="stack">
+
+    <article class="card" style="--i:0">
+      <div class="info">
+        <div>
+          <span class="num">01 / 04</span>
+          <h3 style="margin-top:14px">Netto Express Laundry</h3>
+          <p class="role">Full-stack · Dibangun sendiri dari awal</p>
+          <p class="desc">Aplikasi CRM dan POS untuk usaha laundry, dengan otomasi WhatsApp, pelacakan status cucian, dan dashboard Power BI untuk memantau penjualan.</p>
+        </div>
+        <div class="tags"><span>CRM / POS</span><span>Power BI</span><span>Web App</span></div>
+        <a class="go magnet" href="https://project-pfl-zeta.vercel.app/" target="_blank" rel="noopener"><span>Lihat demo</span></a>
+      </div>
+      <div class="vis"><img src="assets/images/netto-laundry.webp" alt="Tampilan landing page Netto Laundry"></div>
+    </article>
+
+    <article class="card" style="--i:1">
+      <div class="info">
+        <div>
+          <span class="num">02 / 04</span>
+          <h3 style="margin-top:14px">CRM Enterprise Web Platform</h3>
+          <p class="role">Full-stack developer · Proyek akademik</p>
+          <p class="desc">Aplikasi manajemen hubungan pelanggan berbasis Laravel dengan arsitektur MVC yang modular. Ada modul analitik penjualan, pelacakan interaksi pelanggan, dan riwayat layanan.</p>
+        </div>
+        <div class="tags"><span>Laravel</span><span>MVC</span><span>Analitik</span></div>
+        <a class="go magnet" href="#"><span>Lihat proyek</span></a>
+      </div>
+      <div class="vis"><canvas data-kind="wave"></canvas></div>
+    </article>
+
+    <article class="card" style="--i:2">
+      <div class="info">
+        <div>
+          <span class="num">03 / 04</span>
+          <h3 style="margin-top:14px">Prediksi Kesegaran Bayam</h3>
+          <p class="role">Frontend &amp; UI/UX · Tim</p>
+          <p class="desc">Antarmuka web untuk unggah foto bayam, lihat hasil klasifikasi kesegaran, dan baca tips penanganannya. Di belakangnya ada model CNN yang saya bantu latih dan deploy.</p>
+        </div>
+        <div class="tags"><span>Frontend</span><span>UI/UX</span><span>CNN</span></div>
+        <a class="go magnet" href="https://deteksibayam.vercel.app/" target="_blank" rel="noopener"><span>Lihat demo</span></a>
+      </div>
+      <div class="vis live-vis">
+        <img src="assets/images/kesegaran-bayam.webp" alt="Tampilan frontend aplikasi prediksi kesegaran bayam">
+        <iframe class="live" src="https://deteksibayam.vercel.app/" title="Preview live frontend Bayam" loading="lazy"></iframe>
+        <button class="live-btn" type="button">▶ coba live</button>
+      </div>
+    </article>
+
+    <article class="card" style="--i:3">
+      <div class="info">
+        <div>
+          <span class="num">04 / 04</span>
+          <h3 style="margin-top:14px">Ujian Online Pertamina</h3>
+          <p class="role">Web app · Seleksi magang</p>
+          <p class="desc">Portal ujian online dan asesmen terpadu bertema Pertamina untuk seleksi magang. Ada modul CBT, Self Induction, dan deteksi pelanggaran berbasis AI proctoring.</p>
+        </div>
+        <div class="tags"><span>Sistem ujian</span><span>Web App</span></div>
+        <a class="go magnet" href="#"><span>Lihat proyek</span></a>
+      </div>
+      <div class="vis"><img src="assets/images/ujian-pertamina.webp" alt="Tampilan portal ujian online Pertamina"></div>
+    </article>
+
+  </div>
+
+  <p class="also">Juga pernah bikin: React JS Campus Frontend, Aplikasi Administrasi Perangkat Lembaga, purwarupa LingkunganKu di Figma, dan analisis proses bisnis jasa laundry pakai BPMN.</p>
+</section>
+
+<section class="outside" aria-label="Videografi dan edit video">
+  <span class="lbl">Videografi &amp; edit video</span>
+  <div class="reel-embed">
+    <iframe src="https://www.instagram.com/reel/DamgOnyOyXw/embed" title="Reel video Nezy" allowtransparency="true" allowfullscreen loading="lazy"></iframe>
+    <video src="reel.mp4" controls playsinline loop preload="metadata" onerror="this.remove()"></video>
+  </div>
+  <a class="go magnet" href="https://www.instagram.com/reel/DamgOnyOyXw/" target="_blank" rel="noopener"><span>Tonton di Instagram</span></a>
+</section>
+
+<section class="momen" aria-label="Momen">
+  <div class="momen-pin">
+  <h2 class="h2 mh">Fotografi &amp; momen</h2>
+  <div class="gbar"><i></i></div>
+  <div class="momen-track">
+    <figure class="m m1" style="--fx:-220px;--fy:80px;--fr:-12deg;--dl:0s"><img src="foto-1.jpg" alt="Enabling Skill 2026" onerror="this.parentElement.classList.add('empty')"><figcaption>Enabling Skill 2026</figcaption></figure>
+    <figure class="m m2" style="--fx:0px;--fy:220px;--fr:6deg;--dl:.12s"><img src="foto-2.jpg" alt="Babe Laundry" onerror="this.parentElement.classList.add('empty')"><figcaption>Babe Laundry</figcaption></figure>
+    <figure class="m m3" style="--fx:240px;--fy:60px;--fr:10deg;--dl:.24s"><img src="foto-3.jpg" alt="madebysyav" onerror="this.parentElement.classList.add('empty')"><figcaption>madebysyav</figcaption></figure>
+    <figure class="m m4" style="--fx:-180px;--fy:-120px;--fr:-8deg;--dl:.36s"><img src="foto-4.jpg" alt="BES Insan Cendekia" onerror="this.parentElement.classList.add('empty')"><figcaption>BES Insan Cendekia</figcaption></figure>
+    <figure class="m m5" style="--fx:160px;--fy:200px;--fr:12deg;--dl:.48s"><img src="foto-5.jpg" alt="HIMASISTIFO" onerror="this.parentElement.classList.add('empty')"><figcaption>HIMASISTIFO</figcaption></figure>
+    <figure class="m m6" style="--fx:0px;--fy:-200px;--fr:-6deg;--dl:.6s"><img src="foto-6.jpg" alt="MUBES UKMI & WSBP" onerror="this.parentElement.classList.add('empty')"><figcaption>MUBES UKMI & WSBP</figcaption></figure>
+    <figure class="m m7" style="--fx:180px;--fy:80px;--fr:8deg;--dl:.72s"><img src="foto-7.jpg" alt="Presentasi CBT Pertamina" onerror="this.parentElement.classList.add('empty')"><figcaption>Presentasi CBT Pertamina</figcaption></figure>
+    <figure class="m m8" style="--fx:-140px;--fy:160px;--fr:-10deg;--dl:.84s"><img src="foto-8.jpg" alt="Pertamina Refinery Unit II" onerror="this.parentElement.classList.add('empty')"><figcaption>Pertamina Refinery Unit II</figcaption></figure>
+    <figure class="m m9" style="--fx:200px;--fy:-80px;--fr:6deg;--dl:.96s"><img src="foto-9.jpg" alt="Wisuda SMA IT Insan Cendekia" onerror="this.parentElement.classList.add('empty')"><figcaption>Wisuda Insan Cendekia</figcaption></figure>
+    <figure class="m m10" style="--fx:-200px;--fy:100px;--fr:-8deg;--dl:1.08s"><img src="foto-10.jpg" alt="D4 Sistem Informasi PCR" onerror="this.parentElement.classList.add('empty')"><figcaption>Sistem Informasi PCR</figcaption></figure>
+    <figure class="m m11" style="--fx:120px;--fy:-140px;--fr:10deg;--dl:1.2s"><img src="foto-11.jpg" alt="Setup kerja di Pertamina" onerror="this.parentElement.classList.add('empty')"><figcaption>Setup Kerja Pertamina</figcaption></figure>
+    <figure class="m m12" style="--fx:-160px;--fy:-60px;--fr:-5deg;--dl:1.32s"><img src="foto-12.jpg" alt="Workshop & Sharing WSBP" onerror="this.parentElement.classList.add('empty')"><figcaption>Workshop WSBP</figcaption></figure>
+    <figure class="m m13" style="--fx:180px;--fy:140px;--fr:7deg;--dl:1.44s"><img src="foto-13.jpg" alt="Momen Pribadi" onerror="this.parentElement.classList.add('empty')"><figcaption>Selfie time ✨</figcaption></figure>
+    <figure class="m m14" style="--fx:-100px;--fy:-180px;--fr:-12deg;--dl:1.56s"><img src="foto-14.jpg" alt="Presentasi Kerja Praktek Pertamina" onerror="this.parentElement.classList.add('empty')"><figcaption>Presentasi KP Pertamina</figcaption></figure>
+  </div>
+  </div>
+</section>
+
+<section id="pengalaman">
+  <div class="exp">
+    <div class="exp-side">
+      <h2 class="h2">Pengalaman</h2>
+      <p class="exp-lead">Dari bisnis sendiri sampai kepanitiaan dan organisasi. Tiap peran ngajarin saya sesuatu yang beda.</p>
+    </div>
+    <div class="exp-line">
+      <article class="xp" style="--c:var(--pink)">
+        <p class="xp-when">2025 – sekarang</p>
+        <h4>Founder</h4>
+        <p class="xp-org">madebysyav</p>
+        <p class="xp-desc">Personal brand fashion dan digital marketing. Mengurus promosi produk, konten, branding, komunikasi pelanggan, dan media sosial.</p>
+      </article>
+      <article class="xp" style="--c:var(--ultra)">
+        <p class="xp-when">Sep 2024 – sekarang</p>
+        <h4>Founder & Business Manager</h4>
+        <p class="xp-org">Babe Laundry</p>
+        <p class="xp-desc">Mengelola operasional harian, keuangan dan anggaran, pencatatan pendapatan dan pengeluaran, serta kualitas layanan.</p>
+      </article>
+      <article class="xp" style="--c:var(--green)">
+        <p class="xp-when">2025 – sekarang</p>
+        <h4>Anggota Bidang Sosial</h4>
+        <p class="xp-org">HIMASISTIFO</p>
+        <p class="xp-desc">Mengoordinasikan logistik program sosial dan komunikasi formal dengan pihak internal maupun eksternal kampus.</p>
+      </article>
+      <article class="xp" style="--c:var(--pink)">
+        <p class="xp-when">2025 – sekarang</p>
+        <h4>Anggota Divisi Media Center</h4>
+        <p class="xp-org">UKMI</p>
+        <p class="xp-desc">Mengelola publikasi digital dan komunikasi visual untuk menjaga engagement media sosial.</p>
+      </article>
+      <article class="xp" style="--c:var(--green)">
+        <p class="xp-when">2025</p>
+        <h4>Bendahara Utama</h4>
+        <p class="xp-org">PKM & Bukber HIMASISTIFO</p>
+        <p class="xp-desc">Menyusun rencana anggaran, mengawasi arus kas, menerapkan efisiensi biaya logistik, dan membuat laporan pertanggungjawaban dana.</p>
+      </article>
+      <article class="xp" style="--c:var(--ultra)">
+        <p class="xp-when">2025</p>
+        <h4>Koordinator Humas</h4>
+        <p class="xp-org">Musyawarah Besar UKMI</p>
+        <p class="xp-desc">Memimpin alur komunikasi birokrasi kampus dan memitigasi risiko miskomunikasi antar-delegasi sidang.</p>
+      </article>
+      <article class="xp" style="--c:var(--pink)">
+        <p class="xp-when">2025</p>
+        <h4>Mentor</h4>
+        <p class="xp-org">Workshop & Sharing WSBP</p>
+        <p class="xp-desc">Fasilitator teknis yang membantu mahasiswa baru memahami konsep dasar perkuliahan.</p>
+      </article>
+      <article class="xp" style="--c:var(--ultra)">
+        <p class="xp-when">Nov 2022 – Okt 2023</p>
+        <h4>Ketua Departemen Keamanan</h4>
+        <p class="xp-org">Badan Eksekutif Santri Insan Cendekia</p>
+        <p class="xp-desc">Menegakkan tata tertib harian dan memediasi konflik antarindividu secara objektif.</p>
+      </article>
+    </div>
+  </div>
+  <div class="edu-wrap" style="margin-top:clamp(64px,10vh,110px)">
+    <span class="lbl">Pendidikan</span>
+    <div class="edu-grid">
+      <article class="edu-card e1">
+        <span class="edu-mono">PCR</span>
+        <div>
+          <p class="edu-when">2024 – sekarang</p>
+          <h4>D4 Sistem Informasi</h4>
+          <p class="edu-sch">Politeknik Caltex Riau · Pekanbaru</p>
+          <p class="edu-note">Fokus web &amp; mobile development, UI/UX, business process analysis, dan data visualization.</p>
+        </div>
+      </article>
+      <article class="edu-card e2">
+        <span class="edu-mono">SMA</span>
+        <div>
+          <p class="edu-when">2021 – 2023</p>
+          <h4>Sekolah Menengah Atas</h4>
+          <p class="edu-sch">SMA IT Insan Cendekia · Payakumbuh</p>
+          <p class="edu-note">Aktif di Badan Eksekutif Santri sebagai Ketua Departemen Keamanan.</p>
+        </div>
+      </article>
+      <article class="edu-card e3">
+        <span class="edu-mono">MTs</span>
+        <div>
+          <p class="edu-when">2018 – 2020</p>
+          <h4>Madrasah Tsanawiyah Negeri</h4>
+          <p class="edu-sch">MTsN 1 Pekanbaru</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <span class="lbl">Menang-menang dikit</span>
+  <div class="ach">
+    <div>
+      <h4>Finalis &amp; Video Terfavorit, BMC Competition WSBP</h4>
+      <p>Menganalisis validasi model bisnis, menyusun value proposition, dan menilai risiko pasar.</p>
+    </div>
+    <div>
+      <h4>Finalis Nasional, Musabaqah POLIBATAM</h4>
+      <p>Berkompetisi dalam penalaran ilmiah, analisis isu sosial, dan public speaking di tingkat nasional.</p>
+    </div>
+    <div>
+      <h4>Video Pendek Terbaik, Enabling Skill 2026</h4>
+      <p>Ketua tim di Community Impact Project &amp; Exhibition Politeknik Caltex Riau. Saya mengoordinasikan proyek dan ikut menyunting video.</p>
+    </div>
+    <div>
+      <h4>Peserta Lomba Fotografi Nasional UIN Jakarta</h4>
+      <p>Menyampaikan cerita lewat foto di kompetisi tingkat nasional.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skill">
+  <h2 class="h2">Skill yang aku pake</h2>
+  <div class="band"><div class="band-track"><span>Laravel</span><em>✳</em><span>React JS</span><em>✳</em><span>PHP Native</span><em>✳</em><span>Python</span><em>✳</em><span>Kotlin</span><em>✳</em><span>Flutter</span><em>✳</em><span>Laravel</span><em>✳</em><span>React JS</span><em>✳</em><span>PHP Native</span><em>✳</em><span>Python</span><em>✳</em><span>Kotlin</span><em>✳</em><span>Flutter</span><em>✳</em></div></div>
+  <div class="band rev"><div class="band-track"><span>Figma</span><em>✳</em><span>Bizagi</span><em>✳</em><span>Power BI</span><em>✳</em><span>Excel</span><em>✳</em><span>CNN</span><em>✳</em><span>Flask</span><em>✳</em><span>Figma</span><em>✳</em><span>Bizagi</span><em>✳</em><span>Power BI</span><em>✳</em><span>Excel</span><em>✳</em><span>CNN</span><em>✳</em><span>Flask</span><em>✳</em></div></div>
+  <div class="skill-groups">
+    <div>
+      <h4>Backend &amp; Frontend</h4>
+      <div class="tags"><span>Laravel</span><span>React JS</span><span>PHP Native</span><span>Python</span><span>Kotlin</span><span>Flutter</span></div>
+    </div>
+    <div>
+      <h4>Data &amp; Analitik</h4>
+      <div class="tags"><span>Power BI</span><span>Excel Advanced</span><span>Pivot tables</span><span>Data mining</span></div>
+    </div>
+    <div>
+      <h4>Desain &amp; Proses</h4>
+      <div class="tags"><span>Figma</span><span>UI/UX</span><span>Bizagi (BPMN)</span><span>StarUML</span><span>Canva</span></div>
+    </div>
+    <div>
+      <h4>Soft skills</h4>
+      <div class="tags"><span>Public speaking</span><span>Kepemimpinan</span><span>Manajemen keuangan</span><span>Resolusi konflik</span><span>Berpikir kritis</span></div>
+    </div>
+  </div>
+  <div class="langs">
+    <div>Indonesia<small>Penutur asli</small></div>
+    <div>Inggris<small>Menengah</small></div>
+    <div>Arab<small>Dasar</small></div>
+  </div>
+</section>
+
+<section class="interest" aria-label="Minat di luar kode">
+  <h2 class="h2">Di luar kode</h2>
+  <div class="int-grid">
+    <a class="int i1" id="substack" href="#" target="_blank" rel="noopener">
+      <span class="int-k">menulis</span>
+      <h4>Substack</h4>
+      <p>Tulisan dan catatan dari perjalanan belajar saya di dunia teknologi dan data.</p>
+      <span class="int-go">baca tulisan saya</span>
+    </a>
+    <div class="int i2">
+      <span class="int-k">fotografi</span>
+      <h4>Foto</h4>
+      <p>Menangkap momen dan cerita lewat frame. Pernah ikut lomba foto tingkat nasional.</p>
+    </div>
+    <div class="int i3">
+      <span class="int-k">videografi</span>
+      <h4>Video</h4>
+      <p>Mengambil gambar dan menyusun cerita visual, termasuk video yang meraih penghargaan di Enabling Skill 2026.</p>
+    </div>
+    <div class="int i4">
+      <span class="int-k">editing</span>
+      <h4>Edit video</h4>
+      <p>Ritme cut, motion, dan caption, dari reels sampai video kegiatan.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontak" style="margin-left:calc(-1*var(--pad));margin-right:calc(-1*var(--pad));width:calc(100% + 2*var(--pad))">
+  <p class="lead">mau bikin something bareng? 👀</p>
+  <a class="mail magnet" href="mailto:wilyannesa@gmail.com">wilyannesa@gmail.com</a>
+  <div class="links">
+    <a href="mailto:wilyannesa@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/vanesya-wilyan-73109b384/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <footer class="foot">
+    <div class="foot-big" aria-hidden="true"><div class="foot-track">
+      <span>Vanesya Wilyan <em>✳</em> Nezy <em>✳</em> Web &amp; Data <em>✳</em> </span>
+      <span>Vanesya Wilyan <em>✳</em> Nezy <em>✳</em> Web &amp; Data <em>✳</em> </span>
+    </div></div>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <p class="foot-title">ngobrol di mana aja</p>
+        <div class="foot-links">
+          <a href="mailto:wilyannesa@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/vanesya-wilyan-73109b384/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/madebysyav/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <p class="foot-title">sekarang jam</p>
+        <p class="clock" id="clock">--:--:--</p>
+        <p class="foot-note">WIB · Pekanbaru, Riau</p>
+      </div>
+      <div class="foot-col foot-end">
+        <button class="totop" id="totop" type="button">↑ balik ke atas</button>
+        <p class="foot-copy">© 2026 Vanesya Wilyan<br>dibikin pake HTML, CSS, dan canvas.<br>ketik “nezy” buat kejutan ✨</p>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+
+<script src="assets/js/canvas.js" defer></script>
+<script src="assets/js/lanyard.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -341,6 +341,10 @@ function initMain() {
     const tiles = [...mTrack.querySelectorAll('.m')];
 
     const updateGallery = () => {
+      if (window.innerWidth <= 900) {
+        mTrack.style.transform = '';
+        return;
+      }
       const rect = momenEl.getBoundingClientRect();
       const total = momenEl.offsetHeight - innerHeight;
       const p = Math.min(1, Math.max(0, -rect.top / total));
@@ -457,22 +461,7 @@ function initMain() {
      13. FLYING PHOTOS ANIMATION
      ========================================================================== */
   const figs = [...document.querySelectorAll('.m')];
-  if (reduce) {
-    figs.forEach(f => f.classList.add('in'));
-  } else {
-    const ioPhotos = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('in');
-            ioPhotos.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 }
-    );
-    figs.forEach(f => ioPhotos.observe(f));
-  }
+  figs.forEach(f => f.classList.add('in'));
 
   /* ==========================================================================
      14. BACKGROUND MUSIC TOGGLE

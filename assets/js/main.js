@@ -273,6 +273,12 @@ function initMain() {
     v.play().catch(() => {});
   });
 
+  document.querySelectorAll('.reel-embed video').forEach(v => {
+    v.addEventListener('click', () => {
+      v.muted = !v.muted;
+    });
+  });
+
   /* ==========================================================================
      7. SPARKLE CURSOR TRAIL & EASTER EGG ("nezy")
      ========================================================================== */
